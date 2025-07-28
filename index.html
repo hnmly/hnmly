@@ -2,14 +2,55 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>hnmly의 기술 정리</title>
+  <title>hnmly</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .novel-list {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .novel-list li {
+      background: #fff;
+      margin: 15px 0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .novel-list a {
+      text-decoration: none;
+      color: #0077cc;
+      font-size: 1.2em;
+    }
+    .novel-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <h1>👋 hnmly의 기술 문서 모음</h1>
-  <ul>
-    <li><a href="aws.html">📘 AWS 정리</a></li>
-    <li><a href="docker.html">🐳 Docker 정리</a></li>
-    <li><a href="python.html">🐍 파이썬 정리</a></li>
+
+  <h1>hnmly</h1>
+  <p>읽고 싶은 작품을 선택하세요</p>
+
+  <ul class="novel-list">
+    <li>
+      <a href="novel1/index.html">「마피아 1화」</a>
+      <p>무능력한 주인공의 두뇌 게임</p>
+    </li>
+    <li>
+      <a href="novel2/index.html">「마피아 2화」</a>
+      <p>무능력한 주인공의 두뇌 게임</p>
+    </li>
   </ul>
+
 </body>
 </html>
