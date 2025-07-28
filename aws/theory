@@ -11,7 +11,7 @@
 </head>
 <body>
   <h2>AWS 이론 정리</h2>
-  <a href="vpc.md">VPC</a>
-  <a href="IAM.md">IAM</a>
+  <a href="vpc">VPC</a>
+  <a href="IAM">IAM</a>
 </body>
 </html>
