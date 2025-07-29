@@ -11,14 +11,14 @@
 </head>
 <body>
 <h2>Dynamo DB 문제지</h2><br><br>
-</h2>Lambda Function과 같이 Source Code를 실행할 필요 없이 API 요청을 API Gateway에서 DynamoDB에 데이터를 READ, WRITE가 가능하도록 구성합니다.</h2><br>
+</h2>문제 - Lambda Function과 같이 Source Code를 실행할 필요 없이 API 요청을 API Gateway에서 DynamoDB에 데이터를 READ, WRITE가 가능하도록 구성합니다.</h2><br>
 </h2>VPC - 이름: serverless-vpc, IP: 10.0.0.0/16</h2><br>
 </h2>Subnet - 이름: serverless-public-sn-a, IP: 10.0.100.0/24, 가용 영역: ap-northeast-2a, 라우팅 테이블: serverless-public-rt</h2><br>
 </h2>Bation Host - 이름: serverless-bastion, 인스턴스 타입: t3.medium, OS: Amazon Linux 2023, 서브넷: serverless-public-sn-a, 권한: Poweruser, 패키지(root에서 작동): awscliv2, curl</h2><br>
 </h2>DynamoDB Table - 이름: serverless-user-table</h2><br>
 </h2>API Gateway - 이름: serverless-api-gw, API 타입: REST, 조건: id에 admin이라는 단어가 들어가면 error가 발생</h2><br>
-</h2>APi POST 요청 예시- id=honggildong&age=19&company=wsc, 출력: {“msg”: “Success insert data”}</h2><br>
-</h2>API Get 요청 예시- id=honggildong, 출력: {“id”: “honggildong”, “age”: 19, “company”: “wsc”}, 200</h2><br>
+</h2>APi POST 요청 예시 - id=honggildong&age=19&company=wsc, 출력: {“msg”: “Success insert data”}</h2><br>
+</h2>API Get 요청 예시 - id=honggildong, 출력: {“id”: “honggildong”, “age”: 19, “company”: “wsc”}, 200</h2><br>
 </h2>Error 예시- id=hongadmin&age=19&company=wsc, 출력: {“message”: “Internal server error”}, 500
 </body>
 </html>
