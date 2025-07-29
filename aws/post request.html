@@ -11,21 +11,16 @@
 </head>
 <body>
 <h2>POST 통합 요청 코드</h2><br><br>
-</h2>#set($inputRoot = $input.params())
-#if($input.params('id').toLowerCase().contains("admin"))
-  #set($context.responseOverride.status = 400)
-  {
-    "error": "ID에 'admin'을 포함할 수 없습니다."
-  }
-#else
-  {
-    "TableName": "serverless-user-table",
-    "Item": {
-      "id": { "S": "$input.params('id')" },
-      "company": { "S": "$input.params('company')" },
-      "age": { "N": "$input.params('age')" }
-    }
-  }
+</h2>#set($inputRoot = $input.params())<br>
+#if($input.params('id').toLowerCase().contains("admin"))<br>
+  #set($context.responseOverride.status = 400)<br>
+  {"error": "ID에 'admin'을 포함할 수 없습니다."}<br>
+#else<br>
+  {"TableName": "serverless-user-table",<br>
+    "Item": {<br>
+      "id": { "S": "$input.params('id')" },<br>
+      "company": { "S": "$input.params('company')" },<br>
+      "age": { "N": "$input.params('age')" }}}<br>
 #end
 </h2><br>
 </body>
