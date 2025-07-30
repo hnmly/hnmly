@@ -20,7 +20,7 @@
 </h2>Bastion - EC2 type: t3.small, 이미지: Amazon Linux2, 권한: AWS PowerUser policy, 설치 패키지: awscli, jq, curl (루트랑 기본 사용자에 설치), 이름: wsi-bastion-ec2</h2><br>
 </h2>웹 어플리케이션 - S3 이름: wsi-비번호-4자리 임의값-artifactory, S3 파일에 있는 app 코드를 사용합니다.</h2><br>
 </h2>오토스케일링 - 오토스케일링그룹/EC2 이름: wsi-web-api-asg (생성된 EC2 이름도 같은 이름을 가짐), 이미지: Amazon Linux2, EC2 type: t3.small, 설치 패키지: jq, curl, 평균 CPU 사용량 30 이상시 스케일 업 되도록 구성, EC2 한대가 죽더라도 서비스가 동작 하도록 구성, 최대 6분 안에 인스턴스가 새로 생성 되거나 종료 되도록 구성</h2><br>
-</h2>로드밸런서 - 인터넷 망에서 LB로 접근 가능하도록 구성, HTTP 80을 통해 접근 가능하도록 구성, 이름: wsi-web-api-alb</h2><br>
+</h2>로드밸런서 - 인터넷 망에서 LB로 접근 가능하도록 구성, HTTP 80을 통해 접근 가능하도록 구성, 이름: wsi-web-api-alb, 헬스체크: /health</h2><br>
 </h2>Cloud Front - CloudFront에 접근시 HTTPS를 통하여 접근 가능하도록 구성, S3와 ALB 두개의 origin을 가지도록 구성, 전 세계의 유저가 빠른 속도로 접근 가능하도록 구성, 이름: wsi-web-cdn</h2><br>
 </h2>로그 - wsi-web-api-asg서버에서 남기는 app 로그가 CloudWatch Logs에 저장 되도록 구성, 로그그룹 이름: /aws/ec2/wsi, 로그 스트림 이름: api_EC2 ID</h2><br>
 </h2>모니터링 - 대시보드 이름: WSI_API</h2><br>
