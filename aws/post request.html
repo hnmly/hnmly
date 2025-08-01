@@ -10,7 +10,7 @@
   </style>
 </head>
 <body>
-<h2>POST 통합 요청 코드</h2><br><br>
+<h2>POST 통합 요청 코드</h2>
 </h2>#set($inputRoot = $input.params())<br>
 #if($input.params('id').toLowerCase().contains("admin"))<br>
   #set($context.responseOverride.status = 400)<br>
